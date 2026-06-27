@@ -1,7 +1,7 @@
 # This is example of linter
 
 from flask import Flask, render_template
-app = Flask(__name__
+app = Flask(__name__)
 
 
 @app.route('/')
