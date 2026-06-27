@@ -1,4 +1,4 @@
-# This is example of linter
+# This is example of linter python
 
 from flask import Flask, render_template
 app = Flask(__name__)
