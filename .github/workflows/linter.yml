@@ -1,0 +1,24 @@
+# Goal - Linter will check the syntax of python code.
+# whenever someone change the python code, then linter will check the syntax, format, indentation is correct or not
+
+name: Linter check
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+        # This step will checkout the code
+      - name: Check out/ clone the code
+        uses: actions/checkout@v7
+
+        # This step will install python linter - ruff
+      - name: Install ruff
+        run: pip install ruff
+
+        # This step will check the .py file syntax
+      - name: check the syntax
+        run: ruff check . 
